@@ -65,6 +65,7 @@ class spkAPI {
         return await this.run({token: this.token, action: "pay", spPayCode, sum, transactionMessage});
     }
 
+
     /**
      * @name get_permission
      * @description При первом запуске Вашего приложения, вы можете сразу рассказать пользователю, какие разрешения вам необходимы
@@ -77,48 +78,113 @@ class spkAPI {
      * @param {String} license_key - Ключ лицензии пользователя, у которого запрашивается разрешение.
      * @param {String | Number} permission_id - ID запрашиваемого разрешения.
      * @returns {Object}
+     * @deprecated
      */
     async get_permission(license_key, permission_id) {
-	    return this.run({token: this.token, action: "get_permission", license_key, permission_id});
+        return await this.getPermission(license_key, permission_id);
     }
+
+    /**
+     * @name getPermission
+     * @description При первом запуске Вашего приложения, вы можете сразу рассказать пользователю, какие разрешения вам>     * для работоспособности приложения и запросить их все с помощью данного запроса.
+     * Полный список всех разрешений:
+     * 1 - Тестовое разрешение.
+     * 2 - Чтение информации о банковских счетах.
+     * 3 - Чтение уведомлений.
+     * 4 - Пометка уведомлений прочитанными.
+     * @param {String} license_key - Ключ лицензии пользователя, у которого запрашивается разрешение.
+     * @param {String | Number} permission_id - ID запрашиваемого разрешения.
+     * @returns {Object}
+     */
+    async getPermission(license_key, permission_id) {
+        return this.run({token: this.token, action: "get_permission", license_key, permission_id});
+    }
+
 
     /**
      * @name permission_test
      * @description Запрос, не выполняющий никаких действий. Создан для проверки работы механизма выдачи прав доступа.
      * @param {String} license_key - Ключ лицензии пользователя, у которого запрашивается разрешение.
      * @return {Object}
+     * @deprecated
      */
     async permission_test(license_key) {
-	    return await this.run({token: this.token, action: "permission_test", license_key});
+        return await this.permissionTest(license_key);
     }
+
+    /**
+     * @name permissionTest
+     * @description Запрос, не выполняющий никаких действий. Создан для проверки работы механизма выдачи прав доступа.
+     * @param {String} license_key - Ключ лицензии пользователя, у которого запрашивается разрешение.
+     * @return {Object}
+     */
+    async permissionTest(license_key) {
+        return await this.run({token: this.token, action: "permission_test", license_key});
+    }
+
 
     /**
      * @name get_cards_info
      * @description Получение данных о банковских счетах пользователя.
      * @param {String} license_key - Ключ лицензии пользователя, у которого запрашивается разрешение.
      * @return {Object}
+     * @deprecated
      */
     async get_cards_info(license_key) {
-	    return await this.run({token: this.token, action: "get_cards_info", license_key});
+	    return await this.getCardsInfo(license_key);
     }
+
+    /**
+     * @name getCardsInfo
+     * @description Получение данных о банковских счетах пользователя.
+     * @param {String} license_key - Ключ лицензии пользователя, у которого запрашивается разрешение.
+     * @return {Object}
+     */
+    async getCardsInfo(license_key) {
+        return await this.run({token: this.token, action: "get_cards_info", license_key});
+    }
+
 
     /**
      * @name get_unread_notifications
      * @description Получение списка непрочитанных уведомлений.
      * @param {String} license_key - Ключ лицензии пользователя, у которого запрашивается разрешение.
      * @return {Object}
+     * @deprecated
      */
     async get_unread_notifications(license_key) {
+        return await this.getUnreadNotifications(license_key);
+    }
+
+    /**
+     * @name getUnreadNotifications
+     * @description Получение списка непрочитанных уведомлений.
+     * @param {String} license_key - Ключ лицензии пользователя, у которого запрашивается разрешение.
+     * @return {Object}
+     */
+    async getUnreadNotifications(license_key) {
         return await this.run({token: this.token, action: "get_unread_notifications", license_key});
     }
+
 
     /**
      * @name mark_notifications_as_read
      * @description Пометка всех непрочитанных уведомлений пользователя как "прочитано".
      * @param {String} license_key - Ключ лицензии пользователя, у которого запрашивается разрешение.
      * @return {Object}
+     * @deprecated
      */
     async mark_notifications_as_read(license_key) {
+        return await this.markNotificationsAsRead(license_key);
+    }
+
+    /**
+     * @name markNotificationsAsRead
+     * @description Пометка всех непрочитанных уведомлений пользователя как "прочитано".
+     * @param {String} license_key - Ключ лицензии пользователя, у которого запрашивается разрешение.
+     * @return {Object}
+     */
+    async markNotificationsAsRead(license_key) {
         return await this.run({token: this.token, action: "mark_notifications_as_read", license_key});
     }
 }
