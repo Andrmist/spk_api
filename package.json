@@ -1,0 +1,30 @@
+{
+  "name": "spk_api",
+  "version": "1.0.0",
+  "description": "spk_api - API for https://spk.jakksoft.com",
+  "main": "spk_api.js",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "jsdoc-to-markdown": "^6.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "spk",
+    "sp",
+    "api"
+  ],
+  "author": "Qugalego",
+  "license": "GPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andrmist/spk_api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Andrmist/spk_api/issues"
+  },
+  "homepage": "https://github.com/Andrmist/spk_api#readme"
+}
