@@ -19,6 +19,7 @@ const spk = new SPK("token", "response_key");
 
 # API Reference
 
+P.S: deprecated методы будут удалены после обновления API на сайте https://spk.jakksoft.com
 ## Методы
 
 <dl>
@@ -83,31 +84,41 @@ const spk = new SPK("token", "response_key");
 
 <a name="spkAPI+get_permission"></a>
 
-### spkAPI.get\_permission()
+### ~~spkAPI.get\_permission()~~
+***Deprecated***
+
 Тоже самое, что и [getPermission](#getPermission)
 
 **Kind**: instance method of [<code>spkAPI</code>](#spkAPI)  
 <a name="spkAPI+permission_test"></a>
 
-### spkAPI.permission\_test()
+### ~~spkAPI.permission\_test()~~
+***Deprecated***
+
 Тоже самое, что и [permissionTest](#permissionTest)
 
 **Kind**: instance method of [<code>spkAPI</code>](#spkAPI)  
 <a name="spkAPI+get_cards_info"></a>
 
-### spkAPI.get\_cards\_info()
+### ~~spkAPI.get\_cards\_info()~~
+***Deprecated***
+
 Тоже самое, что и [getCardsInfo](#getCardsInfo)
 
 **Kind**: instance method of [<code>spkAPI</code>](#spkAPI)  
 <a name="spkAPI+get_unread_notifications"></a>
 
-### spkAPI.get\_unread\_notifications()
+### ~~spkAPI.get\_unread\_notifications()~~
+***Deprecated***
+
 Тоже самое, что и [getUnreadNotifications](#getUnreadNotifications)
 
 **Kind**: instance method of [<code>spkAPI</code>](#spkAPI)  
 <a name="spkAPI+mark_notifications_as_read"></a>
 
-### spkAPI.mark\_notifications\_as\_read()
+### ~~spkAPI.mark\_notifications\_as\_read()~~
+***Deprecated***
+
 Тоже самое, что и [markNotificationsAsRead](#markNotificationsAsRead)
 
 **Kind**: instance method of [<code>spkAPI</code>](#spkAPI)  

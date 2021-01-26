@@ -1,6 +1,6 @@
 {
   "name": "spk_api",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "spk_api - API for https://spk.jakksoft.com",
   "main": "spk_api.js",
   "dependencies": {

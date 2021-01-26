@@ -63,6 +63,7 @@ class spkAPI {
     }
 
     /**
+     * @deprecated deprecated методы будут удалены после обновления API на сайте {@link https://spk.jakksoft.com}
      * @description Тоже самое, что и {@link getPermission}
      */
     async get_permission(license_key, permission_id) {
@@ -88,6 +89,7 @@ class spkAPI {
     // getPermission = this.get_permission.bind(this);
 
     /**
+     * @deprecated deprecated методы будут удалены после обновления API на сайте {@link https://spk.jakksoft.com}
      * @description Тоже самое, что и {@link permissionTest}
      */
     async permission_test(license_key) {
@@ -105,6 +107,7 @@ class spkAPI {
     }
 
     /**
+     * @deprecated deprecated методы будут удалены после обновления API на сайте {@link https://spk.jakksoft.com}
      * @description Тоже самое, что и {@link getCardsInfo}
      */
     async get_cards_info(license_key) {
@@ -122,6 +125,7 @@ class spkAPI {
     }
 
     /**
+     * @deprecated deprecated методы будут удалены после обновления API на сайте {@link https://spk.jakksoft.com}
      * @description Тоже самое, что и {@link getUnreadNotifications}
      */
     async get_unread_notifications(license_key) {
@@ -139,6 +143,7 @@ class spkAPI {
     }
 
     /**
+     * @deprecated deprecated методы будут удалены после обновления API на сайте {@link https://spk.jakksoft.com}
      * @description Тоже самое, что и {@link markNotificationsAsRead}
      */
     async mark_notifications_as_read(license_key) {
