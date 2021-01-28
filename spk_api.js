@@ -8,12 +8,14 @@ class spkAPI {
      * @description Инициализация
      * @param {String} token - Секретный TOKEN вашего приложения.
      * @param {String} responseKey - Ключ ответа. Используется для проверки подлинности источника серверного ответа.
+     * @param {String} server - Сервер на котором вы хотите использовать API. "sp", "spm" или "spk"
      */
-    constructor(token, responseKey) {
+    constructor(token, responseKey, server = "spk") {
         if (!token || !responseKey)
             throw new Error("token или responseKey не указан");
         this.token = token;
         this.responseKey = responseKey;
+        this.server = server;
     }
 
     /**
@@ -27,7 +29,7 @@ class spkAPI {
         for (let i in data) body.push(`${i}=${data[i]}`);
         // console.log(body);
 
-        return await fetch('https://spk.jakksoft.com/api/request', {
+        return await fetch(`https://${this.server}.jakksoft.com/api/request`, {
             method: 'POST',
             headers: {"Content-Type": "application/x-www-form-urlencoded; charset=utf-8"},
             body: encodeURI(body.join("&"))
