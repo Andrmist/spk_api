@@ -11,7 +11,7 @@ $ npm install spk_api
 
 ```js 
 const SPK = require("spk_api");
-const spk = new SPK("token", "response_key");
+const spk = new SPK("token", "response_key", "spk");
 (async () => {
     console.log(await spk.test());
 })()
