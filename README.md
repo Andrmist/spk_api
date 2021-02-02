@@ -11,7 +11,7 @@ $ npm install spk_api
 
 ```js 
 const SPK = require("spk_api");
-const spk = new SPK("token", "response_key");
+const spk = new SPK("token", "response_key", "spk");
 (async () => {
     console.log(await spk.test());
 })()
@@ -77,10 +77,11 @@ P.S: deprecated методы будут удалены после обновле
 Модуль создан Qugalego (Andrmist) для серверов SP, SPM, SPK.
 
 
-| Param | Type | Description |
-| --- | --- | --- |
-| token | <code>String</code> | Секретный TOKEN вашего приложения. |
-| responseKey | <code>String</code> | Ключ ответа. Используется для проверки подлинности источника серверного ответа. |
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| token | <code>String</code> |  | Секретный TOKEN вашего приложения. |
+| responseKey | <code>String</code> |  | Ключ ответа. Используется для проверки подлинности источника серверного ответа. |
+| server | <code>String</code> | <code>spk</code> | Сервер на котором вы хотите использовать API. "sp", "spm" или "spk" |
 
 <a name="spkAPI+get_permission"></a>
 
